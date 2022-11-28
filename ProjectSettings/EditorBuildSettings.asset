@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FirstLevel.unity
+    path: Assets/Scenes/FirstLevel (NO SIRVE).unity
     guid: ce59647480105b94fb422055625b778d
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
@@ -29,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstLevelInstructions.unity
     guid: f371f3d2c7b101d44a41225b246579d1
+  - enabled: 1
+    path: Assets/Scenes/MetroLS.unity
+    guid: 84e129d3e2929cf48b8b25b219acf120
+  - enabled: 1
+    path: Assets/Scenes/Metropoly.unity
+    guid: c6b8e14d27bac7d4ea29cd780b0d044d
+  - enabled: 1
+    path: Assets/Scenes/Metro.unity
+    guid: 597070556789d6b4f92dabc3dc2767a3
+  - enabled: 1
+    path: Assets/Scenes/MetropolyLS.unity
+    guid: 0846120698502624cafdc1631f163e85
   m_configObjects: {}
