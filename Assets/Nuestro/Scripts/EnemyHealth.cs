@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float enemyHealth = 100f;
 
-    public void DeductHealth(float deductHealth)
+    public int health;
+    Animator anim;
+    // Start is called before the first frame update
+    void Start()
     {
-        enemyHealth -= deductHealth;
-
-        if(enemyHealth <= 0)
-        {
-            { EnemyDead(); }
-        }   
+        anim = GetComponent<Animator>();
     }
 
-    private void EnemyDead()
+    // Update is called once per frame
+    void Update()
     {
-        Destroy(gameObject);
+        if (health <= 0)
+            Death();
+    }
+    private void Death()
+    {
+        anim.SetBool("isDead", true);
     }
 }

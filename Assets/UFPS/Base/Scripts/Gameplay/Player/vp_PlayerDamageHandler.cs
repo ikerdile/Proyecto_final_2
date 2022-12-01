@@ -41,6 +41,7 @@ public class vp_PlayerDamageHandler : vp_DamageHandler
 	}
 
 	// falling damage
+	Animator anim;
 	public bool AllowFallDamage = true;
 	public float FallDamageThreshold = 0.15f;
 	public bool DeathOnFallImpactThreshold = false;
@@ -117,8 +118,14 @@ public class vp_PlayerDamageHandler : vp_DamageHandler
 		if (Inventory != null)
 			m_InventoryWasEnabledAtStart = Inventory.enabled;
 
+		anim = GetComponent<Animator>();
+
 	}
-	
+	private void Death()
+	{
+		anim.SetBool("isDead", true);
+	}
+
 
 	/// <summary>
 	/// instantiates the player's death effect, clears the current
@@ -267,6 +274,7 @@ public class vp_PlayerDamageHandler : vp_DamageHandler
 		Damage(new vp_DamageInfo(damage, transform, transform, vp_DamageInfo.DamageType.Fall));
 
 	}
+
 
 
 }
